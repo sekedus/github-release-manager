@@ -1,0 +1,13 @@
+# Node
+node_modules/
+npm-debug.log
+
+# Backend uploads
+backend/uploads/
+backend/public/
+
+# React build
+frontend/build/
+
+# Env files
+.env

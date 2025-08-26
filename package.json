@@ -1,0 +1,39 @@
+{
+  "name": "github-release-manager",
+  "version": "1.0.0",
+  "description": "A web-based tool to manage GitHub releases, assets, and tags for your repositories.",
+  "keywords": [
+    "github",
+    "release",
+    "manager",
+    "ghrm",
+    "assets",
+    "tags",
+    "react",
+    "express",
+    "octokit"
+  ],
+  "homepage": "https://github.com/sekedus/github-release-manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sekedus/github-release-manager.git"
+  },
+  "author": "sekedus",
+  "license": "CC-BY-NC-SA-4.0",
+  "scripts": {
+    "dev:install": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev:start": "concurrently \"npm run dev --prefix backend\" \"npm run start:frontend\"",
+    "build": "node scripts/install-connect-mongo.js && npm install --prefix backend && npm install --prefix frontend && npm run build:frontend && npx cpy \"frontend/build/**\" backend/public",
+    "start": "npm run start:backend",
+    "start:backend": "npm start --prefix backend",
+    "start:frontend": "npm start --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cpy-cli": "^3.1.1"
+  }
+}

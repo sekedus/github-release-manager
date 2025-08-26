@@ -1,0 +1,55 @@
+:root {
+  color-scheme: dark;
+}
+
+.button.is-dark[disabled] {
+  --bulma-button-color-l: 20%;
+}
+
+.notify {
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.notify .notification {
+  --bulma-notification-padding: 1em 1.3em;
+  max-width: 500px;
+  padding-right: 2.5em;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.notify .notification > .delete {
+  top: .6rem;
+  right: .6rem;
+}
+
+.release-assets > td{
+  border-color: var(--bulma-body-background-color);
+  border-bottom-width: var(--bulma-body-size);
+}
+
+.truncate {
+  max-width: clamp(250px, 16vw, 450px);
+}
+
+.truncate-text {
+  max-width: fit-content;
+  min-width: 1ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.back-to-top {
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 9999;
+}
